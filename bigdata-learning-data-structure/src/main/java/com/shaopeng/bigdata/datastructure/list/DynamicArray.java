@@ -101,7 +101,9 @@ public class DynamicArray<E extends Object> implements List<E> {
     @Override
     public E set(int index, E element) {
         E ret = get(index);
+
         elementData[index] = element;
+
         return ret;
     }
 

@@ -79,12 +79,14 @@ public class DoublyLinkedList<E extends Object> implements List<E>, Deque<E> {
         Node<E> node = new Node<>(element);
         node.prev = prev;
         node.next = next;
+        // next == null => prev == tail
         if (next == null) {
             tail = node;
         }
         else {
             next.prev = node;
         }
+        // prev == null => next == head
         if (prev == null) {
             head = node;
         }
@@ -141,12 +143,14 @@ public class DoublyLinkedList<E extends Object> implements List<E>, Deque<E> {
         node.prev = null;
         Node<E> next = node.next;
         node.next = null;
+        // next == null => node == tail
         if (next == null) {
             tail = prev;
         }
         else {
             next.prev = prev;
         }
+        // prev == null => node == head
         if (prev == null) {
             head = next;
         }

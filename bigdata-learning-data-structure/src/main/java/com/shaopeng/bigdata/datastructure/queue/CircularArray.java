@@ -49,6 +49,7 @@ public class CircularArray<E extends Object> implements Deque<E> {
 
     @Override
     public int size() {
+        // (tail - head) % elements.length
         return (tail - head) & (elements.length - 1);
     }
 
@@ -62,6 +63,7 @@ public class CircularArray<E extends Object> implements Deque<E> {
         Objects.requireNonNull(e);
 
         // head：第一个用户元素的索引
+        // (head - 1) % elements.length
         head = (head - 1) & (elements.length - 1);
         elements[head] = e;
 

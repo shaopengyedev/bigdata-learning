@@ -57,6 +57,7 @@ public class SinglyLinkedList<E extends Object> implements List<E> {
 
         Node<E> node = new Node<>(element);
         node.next = next;
+        // prev == null => next == head
         if (prev == null) {
             head = node;
         }
@@ -92,6 +93,7 @@ public class SinglyLinkedList<E extends Object> implements List<E> {
         node.e = null;
         Node<E> next = node.next;
         node.next = null;
+        // prev == null => node == head
         if (prev == null) {
             head = next;
         }
