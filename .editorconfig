@@ -1,0 +1,17 @@
+# --- 权威来源: https://editorconfig.org/ ---
+
+root = true
+
+[*]
+# 字符集统一使用UTF-8
+charset = utf-8
+# 使用空格缩进
+indent_style = space
+# 默认缩进4格
+indent_size = 4
+# 移除行尾多余空格
+trim_trailing_whitespace = true
+# 文件强制使用LF
+end_of_line = lf
+# 文件的末尾必须保留一个换行符（权威规范要求）
+insert_final_newline = true
